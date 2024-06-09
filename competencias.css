@@ -1,0 +1,132 @@
+:root{
+    background: gray;
+}
+.fundoanima{
+    background-size: 200% 200%;
+    animation:fundo 10s infinite ease;
+}
+@keyframes fundo{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+nav{
+    grid-column-start: 1;
+    grid-row-start: 1 ;
+    grid-row-end:4 ;
+    background: linear-gradient(140deg,gray, rgb(0, 0, 0));
+    clip-path: polygon(0 0, 100% 0, 100% 24%, 69% 67%, 0 100%);
+}
+main{
+    width: 100vw;
+    height: 34vh;
+    margin-top: 2.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+main div{
+    height: 60%;
+    width: 100%;
+    border: 8px solid;
+    border-image: url(111.svg) repeat 30;
+    margin-top: 10px;
+    transition: 3s ease-out;
+}
+main div:first-of-type{
+    background: linear-gradient(353deg, rgba(166,52,52,.2) 0%, rgba(156,113,48,.2) 100%);
+    transition: 2s ease-out;
+}
+main div:nth-of-type(2){
+    background: linear-gradient(41deg, rgba(83,166,52,.2) 0%, rgba(199,96,12,.2) 100%);
+    transition: 2s ease-out;
+}
+main div:nth-of-type(3){
+    background: linear-gradient(41deg, rgba(52,166,100,.2) 0%, rgba(255,46,0,.2) 100%);
+    transition: 2s ease-out;
+}
+main div:first-of-type:hover{
+    background: linear-gradient(353deg, rgba(166,52,52,.8) 0%, rgba(156,113,48,.8) 100%);
+}
+main div:nth-of-type(2):hover{
+    background: linear-gradient(41deg, rgba(83,166,52,.8) 0%, rgba(199,96,12,.8) 100%);
+}
+main div:nth-of-type(3):hover{
+    background: linear-gradient(41deg, rgba(52,166,100,.8) 0%, rgba(255,46,0,.8) 100%);
+}
+main div h2{
+    color: black;
+    font-size: 2.4em;
+    font-family: "Times New Roman", Times, serif;
+}
+main div p{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul{
+    list-style-type: none;
+    overflow: hidden;
+} 
+nav li{
+    float: left;
+}
+nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2vw;
+    margin-left: 4vw;
+    text-shadow: 1px 1px black;
+    text-decoration: none;
+    font-size: 3vmax;
+    transition: 350ms ease-out;
+}
+nav li a:hover,.linkcontat:hover, .contatos div a:hover{
+    text-shadow: 1px 1px white;
+    color: black;
+    scale: 105%;
+}
+nav li>a{
+    margin-left: 0vw;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(140deg,gray, rgb(0, 0, 0));
+    clip-path: polygon(100% 100%, 100% 0, 35% 27%, 0 79%, 0 100%);
+}
+.linkcontat,.contatos div a{
+    text-decoration: none;
+    color: white;
+    transition: 350ms ease-out;
+}
+footer div:not(.contatos){
+    float: right;
+    margin-top: 1.5vw;
+    padding: 1vh;
+    padding-left: 5vw;
+    font-size: 2vw;
+    text-shadow: 1px 1px black;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+
+    main>div { 
+       font-size: 3.5vmax; 
+    }
+    footer div:not(.contatos){
+        font-size: 2.5vmax;
+        padding-left: 1.5vw;
+        margin-top: 4.5vw;
+    }
+    nav li a{
+        font-size: 4.5vmax;
+    }
+ }
